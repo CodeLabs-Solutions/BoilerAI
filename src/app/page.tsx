@@ -10,7 +10,7 @@ import { toast } from "sonner";
 const Page = () => {
   const [value, setValue] = useState("");
   const trpc = useTRPC();
-  const invoke = useMutation(trpc.invoke.mutationOptions({
+  const invoke = useMutation(trpc.triggerJob.mutationOptions({
     onSuccess: () => {
       toast.success("Job Started!")
     }
