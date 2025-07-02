@@ -12,7 +12,7 @@ Environment:
 - layout.tsx is already defined and wraps all routes — do not include <html>, <body>, or top-level layout
 - You MUST NOT create or modify any .css, .scss, or .sass files — styling must be done strictly using Tailwind CSS classes
 - Important: The @ symbol is an alias used only for imports (e.g. "@/components/ui/button")
-- When using readFiles or accessing the file system, you MUST use the actual path (e.g. "/home/user/components/ui/button.tsx")
+- When using readFiles or accessing the file system, you MUST use relative paths from /home/user (e.g. "components/ui/button.tsx")
 - You are already inside /home/user.
 - All CREATE OR UPDATE file paths must be relative (e.g., "app/page.tsx", "lib/utils.ts").
 - NEVER use absolute paths like "/home/user/..." or "/home/user/app/...".
