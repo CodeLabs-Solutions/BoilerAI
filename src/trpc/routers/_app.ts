@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { baseProcedure, createTRPCRouter } from '../init';
 import { inngest } from '@/inngest/client';
 export const appRouter = createTRPCRouter({
-  invoke: baseProcedure
+  triggerJob: baseProcedure
   .input(
     z.object({
       value: z.string(),
@@ -11,14 +11,14 @@ export const appRouter = createTRPCRouter({
   .mutation(async ({input}) =>
     {
       await inngest.send({
-        name:"JobEvent",
+        name:"SandboxCreated",
         data:{
           value: input.value,
         }
       })
   }),
 
-  Invoke: baseProcedure
+  getGreeting: baseProcedure
     .input(
       z.object({
         text: z.string(),
