@@ -11,7 +11,7 @@ export const appRouter = createTRPCRouter({
   .mutation(async ({input}) =>
     {
       await inngest.send({
-        name:"SandboxCreated",
+        name:"SandboxDeploy",
         data:{
           value: input.value,
         }

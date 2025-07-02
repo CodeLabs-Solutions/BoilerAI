@@ -5,7 +5,7 @@ import { getSandbox } from "./utils";
 
 export const Job = inngest.createFunction(
     { id: "Job" },
-    { event: "SandboxCreated" },
+    { event: "SandboxDeploy" },
     async ({ event, step }) => {
         const sandboxId = await step.run("get-sandbox-id", async () =>{
             const sandbox = await Sandbox.create("boilerai-nextjs-dev")
